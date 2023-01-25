@@ -33,3 +33,8 @@ At the end of the project, you are expected to be able to [explain to anyone](ht
 - Your code should use the `pycodestyle` style (version 2.5.\*)
 - The length of your files will be tested using `wc`
 - All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+- A documentation is not a simple word, it's a real sentence explaining what's the purpose of the module, class or method (the length of th will be verified)
+- All your functions and coroutines must be type-annotated.
+
+# Setup: `Popular_Baby_Names.csv`
+[Use this data file](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2020/5/7d3576d97e7560ae85135cc214ffe2b3412c51d7.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230125T181355Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=24fd8e772998f8dfe24102405849b1bb864ce4001fbd27ef629b6f76683a1abc) for your project
