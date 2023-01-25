@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""1. FIFO caching
+"""First In First Out caching module.
 """
 import collections
 from base_caching import BaseCaching
@@ -24,11 +24,12 @@ class FIFOCache(BaseCaching):
         """
         if key is None or item is None:
             return
-
-        if len(self.cache_data) >= self.MAX_ITEMS:
+        elif key in self.cache_data:
+            self.cache_order.remove(key)
+        elif len(self.cache_data) >= self.MAX_ITEMS:
             oldest_key = self.cache_order.popleft()
             self.cache_data.pop(oldest_key)
-            print("DISCARD: {}".format(oldest_key))
+            print("DISCARD:", oldest_key)
 
         self.cache_data[key] = item
         self.cache_order.append(key)
@@ -43,7 +44,8 @@ class FIFOCache(BaseCaching):
             any: The item associated with the key or None if the key is not
                 in the cache.
         """
+        # return self.cache_data.get(key, None)
         if key is None or key not in self.cache_data:
             return None
 
-        return self.cache_data[key]
+        return self.cache[key]
