@@ -46,7 +46,7 @@ class LIFOCache(BaseCaching):
             any: The item associated with the key or None if the key is not
             in the cache.
         """
-        if key is none or key not in self.cache_data:
+        if key is None or key not in self.cache_data:
             return None
 
         return self.cache[key]
