@@ -4,6 +4,8 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__)
+HOST = '0.0.0.0'
+PORT = 5000
 
 
 @app.route("/", strict_slashes=False)
@@ -15,7 +17,8 @@ def index():
 def start(app):
     """Start the flask app
     """
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host=HOST, port=PORT)
 
 
-start(app)
+if __name__ == '__main__':
+    start(app)
