@@ -1,12 +1,12 @@
 # English translations for PROJECT.
 # Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# kinyarasam <skinyara.30@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: skinyara.30@gmail.com\n"
 "POT-Creation-Date: 2023-01-31 15:33+0300\n"
 "PO-Revision-Date: 2023-01-31 15:33+0300\n"
 "Last-Translator: kinyarasam <skinyara.30@gmaii.com>\n"
@@ -22,4 +22,10 @@ msgid "home_title"
 msgstr "Welcome to Holberton"
 
 msgid "home_header"
-msgstr "hello world"
+msgstr "Hello World!"
+
+msgid "logged_in_as"
+msgstr "You are looged in as %(username)s."
+
+msgid "not_logged_in"
+msgstr "You are not logged in."
