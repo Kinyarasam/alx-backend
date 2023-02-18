@@ -39,9 +39,9 @@ class LRUCache(BaseCaching):
         # self.cache_order[key] = item
         elif len(self.cache_data) >= BaseCaching.MAX_ITEMS\
                 and key not in self.cache_data:
-                    print("Discard: {}".format(self.cache_order[0]))
-                    self.cache_data.pop(self.cache_order[0])
-                    del self.cache_order[0]
+            print("Discard: {}".format(self.cache_order[0]))
+            self.cache_data.pop(self.cache_order[0])
+            del self.cache_order[0]
         elif key in self.cache_order:
             del self.cache_order[self.cache_order.index(key)]
         self.cache_order.append(key)
