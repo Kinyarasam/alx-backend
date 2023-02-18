@@ -19,7 +19,8 @@ class MRUCache(BaseCaching):
         """Add an item to the cache.
         If the key or item is none, method should not do anything
         If number of items in self.cache_data is higher than
-        BaseCaching.MAXITEMS, the most recently used item in the cache is discarded.
+        BaseCaching.MAXITEMS, the most recently used item in
+        the cache is discarded.
 
         Args:
             key (str): The key to associate with the item.
@@ -45,7 +46,8 @@ class MRUCache(BaseCaching):
             key (str): The key associated with the item to be retrieved.
 
         Returns:
-            any: The item associated with the key or None if the key is not in the cache.
+            any: The item associated with the key or
+                None if the key is not in the cache.
         """
         if key is None or key not in self.cache_data:
             return None
