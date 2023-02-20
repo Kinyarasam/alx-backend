@@ -14,12 +14,17 @@ class Config:
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
+
 # Mock a database user table
 users = {
         1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
         2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
         3: {"name": "Spoky", "locale": "kg", "timezone": "Vulcan"},
-        4: {"name": "Teletubby", "locale": "None", "timezone": "Europe/London"},
+        4: {
+            "name": "Teletubby",
+            "locale": "None",
+            "timezone": "Europe/London"
+            },
     }
 
 
@@ -39,12 +44,14 @@ def get_user() -> Union[Dict, None]:
         return users.get(int(login_id))
     return None
 
+
 @app.before_request
 def before_request() -> None:
     """Performs some routines before each request's resolution.
     """
     user = get_user()
     g.user = user
+
 
 @babel.localeselector
 def get_locale() -> str:
